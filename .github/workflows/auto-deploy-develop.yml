@@ -2,10 +2,9 @@ name: develop-deploy-sakura
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: ["develop"]
   pull_request:
-    branches: [ "develop" ]
-
+    branches: ["develop"]
 
 jobs:
   FTP-Deploy-Action:
@@ -22,4 +21,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: .data/wp-content/themes/${{ secrets.FTP_USERNAME }}/
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          server-dir: ${{ secrets.FTP_SERVER_DEVELOP_DIR }}
